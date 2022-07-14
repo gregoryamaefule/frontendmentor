@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.testimonials{
+    width: 80vw;
+    max-width: 1000px;
+    margin: 6em auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.rightContainer{
+    border: 1px solid black;
+    flex-basis: 73%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.leftContainer{
+    border: 1px solid black;
+    flex-basis: 25%;
+}.one{
+    flex-basis: 64.5%;
+}
+.two{
+    flex-basis: 31.5%;
+}
+.three{
+    flex-basis: 31.5%;
+}
+.four{
+    flex-basis: 64.5%;
+}
+.container>.profileHeader{
+    display: flow-root;
+}
+.profileHeader>div>img{
+    float: left;
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 10px;
+}
+.profileHeader>div{
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}

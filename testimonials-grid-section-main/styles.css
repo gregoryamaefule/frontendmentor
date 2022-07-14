@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Outfit', sans-serif;
+}
+.testimonials{
+    max-width: 1000px;
+    width: 80vw;
+    /* max-width: 1000px; */
+    margin: 6em auto;
+    display: flex;
+    justify-content: space-between;
+}
+.rightContainer{
+    flex-basis: 73%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.leftContainer{
+    flex-basis: 25%;
+}
+.leftContainer>.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    background-color: white;
+    color: hsl(219, 29%, 14%);
+}
+.rightContainer>.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 49%;
+}
+.one{
+    flex-basis: 64.5%;
+    margin-bottom: 1%;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 10% top 0%;
+}
+.two{
+    flex-basis: 31.5%;
+    margin-bottom: 1%;
+    background-color: hsl(217, 19%, 35%);
+}
+.three{
+    flex-basis: 31.5%;
+    margin-top: 1% ;
+    background-color: white;
+}
+.four{
+    flex-basis: 64.5%;
+    margin-top: 1% ;
+    background-color: hsl(219, 29%, 14%);
+}
+.container{
+    padding: 1.5em;
+    border-radius: 0.31em;
+}
+.container>*{
+    margin-bottom: 0.5em;
+}
+.container>.profileHeader{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+.container>.profileHeader:nth-child(2){
+    flex-basis: 80%;
+}
+.profileHeader>div>img{
+    width: 17px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.profileHeader>div{
+    align-items: center;
+    justify-content: center;
+}
+.profileImg{
+    display: flex;
+    align-items: center;
+}
+.messageContainer>*{
+    margin-bottom: 0.5em;
+}
+.container>p{
+    font-size: 10px;
+    opacity: 70%;
+}
+.profileHeader>div>p{
+    font-size: 7px;
+    opacity: 50%;
+}
+.profileHeader>div>h5{
+    font-size: 9px;
+}
+.one>.profileHeader>div>h5, .one>.profileHeader>div>p, .one>p{
+    color: hsl(0, 0%, 81%);
+}
+.one>h2{
+    color: white;
+}
+.two{
+    color: white;
+}
+.three{color: hsl(219, 29%, 14%);}
+.four{color: white;}
+@media (max-width: 800px){
+    .testimonials{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width: 630px){
+    .rightContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
