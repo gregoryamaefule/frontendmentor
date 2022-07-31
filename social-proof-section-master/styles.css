@@ -166,6 +166,7 @@ main{
     @media (max-width:750px){
         main{
             max-width: 400px;
+            margin-top: 4vh;
         }
         .container{
             margin-bottom: 10px;
