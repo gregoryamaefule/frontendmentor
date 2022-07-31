@@ -167,6 +167,7 @@ main{
         main{
             max-width: 400px;
             margin-top: 4vh;
+            width: 90vw;
         }
         .container{
             margin-bottom: 10px;
@@ -194,7 +195,6 @@ main{
         }
         .firstseccontainer{
             width: 100%;
-            border: 1px solid black;
         }
         .firstcontainer p{
             inline-size: 100%;
@@ -210,7 +210,6 @@ main{
             inline-size: 100%;
             /* margin: 8px 0; */
             font-size: 18px;
-            border: 1px solid black;
         }
         .firstseccontainer p:first-child{
             margin-top: 3%;
@@ -238,6 +237,18 @@ main{
         }
         .profileH img{
             width: 33px;
+        }
+    }
+    @media (max-width:500px){
+        
+        .firstcontainer h2{
+            font-size: 44px;
+        }
+        body{
+            background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+            background-position: left top, right bottom;
+            background-repeat: no-repeat, no-repeat;
+            /* background-size: 40vw, 80vw; */
         }
     }
     
