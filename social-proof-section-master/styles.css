@@ -167,6 +167,10 @@ main{
         main{
             max-width: 400px;
         }
+        .container{
+            margin-bottom: 10px;
+            padding: 23px;
+        }
         .firstSection{
             flex-direction: column;
             align-items: center;
