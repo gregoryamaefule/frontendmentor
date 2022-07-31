@@ -1,0 +1,238 @@
+
+
+
+*, ::after *, ::before * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1rem;
+}
+body{
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40vw, 80vw;
+}
+main{
+    width: 76vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 15vh;
+    font-family: 'League Spartan', sans-serif;
+    
+}
+
+.firstSection{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2%;
+    margin-bottom: 35px;
+    justify-content: space-between;
+}
+.secondSection{
+    display: flex;
+    gap: 2%;
+}
+.firstSection div{
+    flex-basis: 48%;
+}
+.secondSection div{
+    flex-basis: 32%;
+    justify-content: space-between;
+}
+.firstcontainer h2{
+    inline-size: 22.5vw;
+    overflow-wrap: break-word;
+    font-size: 3.4vw;
+    color: hsl(300, 43%, 22%);
+    /* border: 1px solid black; */
+}
+.firstcontainer p{
+    inline-size: 31vw;
+    overflow-wrap: break-word;
+    font-size: 1.3vw;
+    line-height: 18px;
+    color: hsl(303, 10%, 53%);
+    font-weight: 500;
+    /* border: 1px solid black; */
+}
+.firstcontainer{
+    /* border: 1px solid black;} */
+}
+
+.firstseccontainer{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+}
+.firstseccontainer p{
+    /* border: 1px solid black; */
+    min-width: max-content;
+    inline-size: 26vw;
+    margin: 8px 0;
+    font-size: 1.15vw;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+    border-radius: 6px;
+    background-color: hsl(300, 24%, 96%);
+    /* word-wrap: break-word; */
+    padding: 15px 12px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.firstseccontainer p:first-child{
+    margin-top: 10%;
+}
+.firstseccontainer p span{
+    margin-right: 15px;
+    color: orange;
+}
+#one{
+    position: relative;
+    left: -2vw;
+}
+#three{
+    position: relative;
+    left: 2vw;
+}
+.container{
+    padding: 2vw;
+    color: white;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 6px;
+    margin-bottom: 10vh;
+}
+.container p{
+    opacity: 80%;
+    font-size: 1.1vw;
+    line-height: 16px;
+}
+.profileH{
+    display: flow-root;
+}
+
+.profileH img{
+    float: left;
+    margin-right: 15px;
+    width: 2vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.profileH h5{
+    margin: 0.1vw;
+    font-size: 1vw;
+}
+.profileH span{
+    font-size: 0.9vw;
+    color: hsl(333, 80%, 67%);
+    opacity: 70%;
+}
+@media (max-width: 850px){
+    .firstcontainer h2{
+        inline-size: 27vw;
+        font-size: 4vw;
+    }
+    .firstcontainer p{
+        inline-size: 35vw;
+        font-size: 1.9vw;
+    }
+    .firstseccontainer p{
+        inline-size: 32vw;
+        font-size: 1.4vw;
+    }
+    .firstseccontainer p:first-child{
+        margin-top: 15%;
+    }
+    .profileH h5{
+        margin: 0.1vw;
+        font-size: 1.4vw;
+    }
+    .profileH span{
+        font-size: 1.4vw;
+        color: hsl(333, 80%, 67%);
+        opacity: 70%;
+    }
+    .container p{
+        opacity: 80%;
+        font-size: 1.4vw;
+    }
+    }
+    @media (max-width:750px){
+        main{
+            max-width: 400px;
+        }
+        .firstSection{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1vh;
+        }
+        .secondSection{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1vh;
+        }
+        .firstcontainer h2{
+            inline-size: 100%;
+            overflow-wrap: break-word;
+            font-size: 55px;
+            text-align: center;
+            color: hsl(300, 43%, 22%);
+            
+        }
+        .firstseccontainer{
+            width: 100%;
+            border: 1px solid black;
+        }
+        .firstcontainer p{
+            inline-size: 100%;
+            overflow-wrap: break-word;
+            font-size: 18px;
+            text-align: center;
+            line-height: 18px;
+            color: hsl(303, 10%, 53%);
+            font-weight: 500;
+            
+        }
+        .firstseccontainer p{
+            inline-size: 100%;
+            /* margin: 8px 0; */
+            font-size: 18px;
+            border: 1px solid black;
+        }
+        .firstseccontainer p:first-child{
+            margin-top: 3%;
+        }
+        .firstseccontainer p span {
+            display: block;
+            margin-bottom: 8px;
+        }
+        #one{
+            position: relative;
+            left: 0;
+        }
+        #three{
+            position: relative;
+            left: 0;
+        }
+        .container p{
+            font-size: 17px;
+        }
+        .profileH h5{
+            font-size: 22px;
+        }
+        .profileH span{
+            font-size: 11px;
+        }
+        .profileH img{
+            width: 33px;
+        }
+    }
+    
