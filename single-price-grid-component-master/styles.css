@@ -92,5 +92,6 @@ p{
 @media (max-width:650px){
     main{
         flex-direction: column;
+        width: 90%;
     }
 }
