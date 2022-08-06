@@ -9,20 +9,56 @@
     font-family: 'Rubik', sans-serif;
 }
 body{
-    /* background-color: hsl(270, 20%, 96%);
-    background-image: url(images/); */
+    background-color: hsl(270, 20%, 96%);
 }
 main{
-    max-width: 730px;
-    min-width: 700px;
-    width: 80%;
-    margin: 30px auto 100px;
+    max-width: 930px;
+    /* min-width: 900px; */
+    min-height: 100vh;
+    width: 76vw;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
     /* flex-flow: row wrap; */
+}
+main::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -23vw;
+    top: -8vh;
+    height: 100vh;
+    border-radius: 0 0 50vh 50vh;
+    width:30vw;
+    background-image: linear-gradient(
+    220deg,
+    hsl(276, 100%, 81%),
+    hsl(276, 55%, 52%)
+  );
+
+}
+main::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: -23vw;
+    bottom: -8vh;
+    height: 100vh;
+    border-radius: 50vh 50vh 0 0;
+    width:30vw;
+    background-image: linear-gradient(
+    220deg,
+    hsla(276, 43%, 86%, 0.665),
+    hsl(270, 20%, 96%)
+  );
+  opacity: 0.5;
+
 }
 .phoneDiv{
     flex-basis: 50%;
+    min-width: 235px;
     max-width: 235px;
     max-height: 510px;
     height: 505px;
@@ -30,6 +66,7 @@ main{
     outline: 10px solid white;
     box-shadow: 20px 20px 20px #ccc;
     position: relative;
+    background-color: hsl(270, 20%, 96%);
 }
 .textDiv{
     flex-basis: 50%;
@@ -178,4 +215,45 @@ main{
     font-size: 0.9rem;
     padding: 0 10px 10px;
     color: hsl(270, 7%, 64%);
+}
+@media (max-width:700px) {
+    main{
+        width: 90vw;
+    }
+    main::before{
+        left: -18vw;
+        top: -40vh;
+    }
+    main::after{
+        bottom: -40vh;
+        right: -18vh;
+    }
+}
+@media (max-width:620px){
+    main{
+        flex-direction: column;
+        gap: 10vh;
+        max-height: 1000px;
+        justify-content: flex-start;
+        margin: 10vh 0;
+    }
+    .phoneDiv{
+        flex-basis: auto;
+    }
+    .textDiv{
+        justify-content: flex-start;
+        text-align: center;
+        inline-size: 350px;
+        flex-basis: auto;
+    }
+    main::before{
+        width: 80vw;
+        left: -30vw;
+        top: -40vh;
+    }
+    main::after{
+        bottom: -60vh;
+        width: 80vw;
+        right: -50vw;
+    }
 }
