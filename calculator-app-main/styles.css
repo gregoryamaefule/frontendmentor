@@ -19,6 +19,15 @@ main{
     font-family: 'League Spartan', sans-serif;
     
 }
+@media (max-width:400px){
+    main{
+        min-width: 350px;
+        width: 90%;
+        min-height: 520px;
+        max-height: 600px;
+        height: 100vh;
+    }
+}
 .calc{
     color: white;
     display: flex;
@@ -29,7 +38,10 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 94px;
+    width: 25%;
+}
+.calc *{
+    font-weight: 700;
 }
 .targ{
     display: flex;
@@ -49,13 +61,31 @@ main{
     color: hsl(6, 63%, 50%);
     text-align: left;
     padding: 3px;
+    background-color: hsl(223, 31%, 20%) ;
 }
 .calc>div *{
     font-size: 9px;
     font-weight: 500;
 }
 i{
-    font-size:28px;color:red;
+    font-size:28px;color:hsl(6, 63%, 50%);
+}
+@media (max-width:400px){
+    .calc *{
+        font-size: 180%;
+    }
+    .calc div{
+        width: 35%;
+    }
+    .calc>div *{
+        font-size: 13px;
+    }
+    .targ div{
+        width: 100%;
+    }
+    .targ button{
+        width: 100%;
+    }
 }
 .screen{
     height: 18%;
@@ -67,6 +97,7 @@ i{
     border-radius: 4.5px;
     background-color: hsl(223, 31%, 20%);
     color: white;
+    font-weight: 700;
 }
 .buttons{
     height: 72%;
@@ -80,7 +111,7 @@ i{
     border-radius: 4.5px;
 }
 .reset{
-    grid-column: 1/ span 2
+    grid-column: 1/ span 2;
 }
 button:last-child{
     grid-column: 3/ span 2;
@@ -94,14 +125,18 @@ button{
     background-color: hsl(30, 25%, 89%);
     opacity: 90%;
     cursor: pointer;
+    color: hsl(223, 31%, 20%);
+    font-weight: 700;
 
 }
 .equals{
     background-color: hsl(6, 63%, 50%);
     box-shadow: 0px 5px hsl(6, 70%, 34%);
+    color: white;
 
 }
 .reset, .DEL{
     background-color: hsl(225, 21%, 49%);
     box-shadow: 0px 5px hsl(224, 28%, 35%);
+    color: white;
 }
