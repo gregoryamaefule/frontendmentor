@@ -7,20 +7,66 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
 </head>
 <body>
+  <main>
+    <section class="calc">
+      <h3>calc</h3>
+      <div>
+        <div class="head">
+          <h5>THEME</h5>
+        </div>
+        <div class="targ">
+          <div>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          </div>
+          <button class="themeSelect">
+            <i class="fa fa-circle"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="screen">
+      399,981
+    </section>
+    <section class="buttons">
+      <button class="Num">7</button>
+      <button class="Num">8</button>
+      <button class="Num">9</button>
+      <button class="DEL">DEL</button>
+      <button class="Num">4</button>
+      <button class="Num">5</button>
+      <button class="Num">6</button>
+      <button class="Op">&plus;</button>
+      <button class="Num">1</button>
+      <button class="Num">2</button>
+      <button class="Num">3</button>
+      <button class="Op">&minus;</button>
+      <button class="Num">.</button>
+      <button class="Num">0</button>
+      <button class="Op">/</button>
+      <button class="Op">&times;</button>
+      <button class="reset">RESET</button>
+      <button class="op equals">&equals;</button>
+    </section>
+  </main>
 
 
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

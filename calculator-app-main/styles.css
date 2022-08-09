@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;500;700&display=swap');
+
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(222, 26%, 31%);
+}
+main{
+    width: 380px;
+    height: 470px;
+    margin: 10vh auto ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'League Spartan', sans-serif;
+    
+}
+.calc{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calc>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 94px;
+}
+.targ{
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    padding: 3px;
+}
+.targ>div{
+    display: flex;
+    justify-content: space-around;
+}
+.themeSelect{
+    margin-top: 3px;
+    width: 40px;
+    box-shadow: none;
+    color: hsl(6, 63%, 50%);
+    text-align: left;
+    padding: 3px;
+}
+.calc>div *{
+    font-size: 9px;
+    font-weight: 500;
+}
+i{
+    font-size:28px;color:red;
+}
+.screen{
+    height: 18%;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    border-radius: 4.5px;
+    background-color: hsl(223, 31%, 20%);
+    color: white;
+}
+.buttons{
+    height: 72%;
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(4, 20%);
+    padding: 15px;
+    font-size: 24px;
+    padding-right: 0;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 4.5px;
+}
+.reset{
+    grid-column: 1/ span 2
+}
+button:last-child{
+    grid-column: 3/ span 2;
+}
+button{
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 5px hsl(28, 16%, 65%);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 24px;
+    background-color: hsl(30, 25%, 89%);
+    opacity: 90%;
+    cursor: pointer;
+
+}
+.equals{
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 5px hsl(6, 70%, 34%);
+
+}
+.reset, .DEL{
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
