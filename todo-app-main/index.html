@@ -13,24 +13,45 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
 
-  Todo
+  <main>
+    <div class="TODO">
+      <h1>TODO</h1>
+      <img src="images/icon-sun.svg" alt="themeChangerIcon">
+    </div>
+    <ul>
+      <li><input type="text" placeholder="Create a new todo..."></li>
+    </ul>
+    <ul>
+      <li>Complete online javaScript course</li>
+      <li>Jog around the park 3x</li>
+      <li>10 minutes medication</li>
+      <li>Read for 1 hour</li>
+      <li>Pick up groceries</li>
+      <li>Complete Todo App on Frontend Mentor</li>
+      <li>
+        <div><span id="listCounter">5</span> items left</div>
+        <div>
+          <span class="link">All</span>
+          <span class="link">Active</span>
+          <span class="link">Completed</span>
+        </div>
+        <div id="clearCompleted">Clear Completed</div>
+      </li>
+    </ul>
+    <div><p>Drag and drop to reorder list</p></div>
+  </main>
+  <div class="g">
+    g
+  </div>
 
-  <!-- Add dynamic number --> items left
-
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

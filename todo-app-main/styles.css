@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-size: 100% 35vh;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+main{
+    width: 540px;
+    margin: 10vh auto;
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+    /* border: 1px solid white; */
+    font-family: 'josefin sans';
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+  }
+
+ul li{
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+  
+li::before {
+    content: '';
+    margin: 0 15px 0 0;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+    height: 1.1rem;
+    width: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background-color: white;
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 30% 30% round; */ 
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 8;
+  }
+  li::before img{
+    width: 0.1rem;
+    aspect-ratio: 1/1;
+  }
+  .g{
+    width: 2rem;
+    color: white;
+    aspect-ratio: 1/1;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 8;
+    text-align: center;
+    margin: 0 auto;
+
+  }
