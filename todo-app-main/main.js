@@ -5,12 +5,31 @@ const activeCMD = document.querySelectorAll('.activeCMD')
 const lizt = document.querySelectorAll('.lizt li')
 const allCMD = document.querySelectorAll('.allCMD')
 const completedCMD = document.querySelectorAll('.completedCMD')
+const uncompleted = document.querySelectorAll('.lizt .uncompleted')
+const crossB = document.querySelectorAll('.after')
 
 for (const radioo of  radioB){
     radioo.addEventListener('click', handleClickCompleted);
 }
 for (const activeCMDs of  activeCMD){
     activeCMDs.addEventListener('click', handleActiveCMD);
+}
+for (const cross of crossB){
+    cross.addEventListener('click', handleCross)
+}
+
+function handleCross(event){
+    event.target.parentNode.remove();
+    setListNo()
+}
+document.querySelector('#clearCompleted').addEventListener('click', handleClearCompleted);
+
+function handleClearCompleted(){
+    const targ = document.querySelectorAll('.lizt .completed');
+    for (const tar of targ){
+        tar.remove()
+        setListNo()
+    }
 }
 
 
@@ -107,6 +126,11 @@ function handleAllCMD(){
         }
     }
 }
+function setListNo(){
+    document.querySelector('#listCounter').innerHTML = document.querySelectorAll('.lizt .uncompleted').length;
+    
+    
+}
 
 function handleClickCompleted(event){
     if (event.target.parentNode.getAttribute('class') === 'completed'){
@@ -121,4 +145,9 @@ function handleClickCompleted(event){
     else if(document.querySelector('.currentStateActive').innerHTML === 'Completed'){
         handleCompletedCMD()
     }
+    setListNo()
+    
 }
+
+
+setListNo()
