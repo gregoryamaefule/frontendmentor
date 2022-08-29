@@ -1,0 +1,1 @@
+const radioB = document.querySelectorAll('.lizt li:nth-child(odd)')
