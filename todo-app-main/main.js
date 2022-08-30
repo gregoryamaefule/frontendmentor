@@ -1,12 +1,12 @@
-const radioB = document.querySelectorAll('.lizt .before')
-const Actives = document.querySelectorAll('.lizt .before .uncompleted')
-const Completeds = document.querySelectorAll('.lizt .before .completed')
-const activeCMD = document.querySelectorAll('.activeCMD')
-const lizt = document.querySelectorAll('.lizt li')
-const allCMD = document.querySelectorAll('.allCMD')
-const completedCMD = document.querySelectorAll('.completedCMD')
-const uncompleted = document.querySelectorAll('.lizt .uncompleted')
-const crossB = document.querySelectorAll('.after')
+let radioB = document.querySelectorAll('.lizt .before')
+let Actives = document.querySelectorAll('.lizt .before .uncompleted')
+let Completeds = document.querySelectorAll('.lizt .before .completed')
+let activeCMD = document.querySelectorAll('.activeCMD')
+let lizt = document.querySelectorAll('.lizt li')
+let allCMD = document.querySelectorAll('.allCMD')
+let completedCMD = document.querySelectorAll('.completedCMD')
+let uncompleted = document.querySelectorAll('.lizt .uncompleted')
+let crossB = document.querySelectorAll('.after')
 
 for (const radioo of  radioB){
     radioo.addEventListener('click', handleClickCompleted);
@@ -38,6 +38,7 @@ function handleActiveCMD(event){
     // sheet.innerHTML = ".completed {display:none;}";
     // document.body.appendChild(sheet);
     // document.styleSheets[0].insertRule(".completed { display:none;}", -1);
+    lizt = document.querySelectorAll('.lizt li')
     for (const lizts of lizt){
         console.log(lizts.getAttribute('style'))
         if (lizts.getAttribute('class') === 'completed'){
@@ -74,6 +75,7 @@ function handleCompletedCMD(){
     // sheet.innerHTML = ".completed {display:none;}";
     // document.body.appendChild(sheet);
     // document.styleSheets[0].insertRule(".completed { display:none;}", -1);
+    lizt = document.querySelectorAll('.lizt li')
     for (const lizts of lizt){
         console.log(lizts.getAttribute('style'))
         if (lizts.getAttribute('class') === 'uncompleted'){
@@ -148,6 +150,40 @@ function handleClickCompleted(event){
     setListNo()
     
 }
+const input = document.querySelector('.inpt input')
+// input.addEventListener('change', () => {
+//     const paraTextcontent = input.value;
+//     const listItem = document.createElement('li')
+//     listItem.classList.add('uncompleted')
+//     listItem.innerHTML = `<span class="before"></span><p>${paraTextcontent}</p><span class="after"></span>`;
+//     document.querySelector('.lizt').appendChild(listItem);
+//     console.log(listItem)
+//     setListNo()
+//     radioB = document.querySelectorAll('.lizt .before')
+//     console.log(radioB.length)
+// })
 
+input.addEventListener('change', () => {
+    const paraTextcontent = input.value;
+    const listItem = document.createElement('li')
+    listItem.setAttribute('class', 'uncompleted')
+    const spanBfr = document.createElement('span')
+    spanBfr.setAttribute('class', 'before')
+    spanBfr.addEventListener('click', handleClickCompleted)
+    // spanBfr.addEventListener('click', handleAllCMD)
+    // spanBfr.addEventListener('click', handleActiveCMD)
+    // spanBfr.addEventListener('click', handleCompletedCMD)
+    const para = document.createElement('p')
+    para.textContent = `${paraTextcontent}`
+    const spanAfter = document.createElement('span')
+    spanAfter.addEventListener('click', handleCross)
+    spanAfter.setAttribute('class', 'after')
+    listItem.appendChild(spanBfr)
+    listItem.appendChild(para)
+    listItem.appendChild(spanAfter)
+    document.querySelector('.lizt').appendChild(listItem)
+    setListNo()
+    console.log(radioB.length)
+})
 
 setListNo()

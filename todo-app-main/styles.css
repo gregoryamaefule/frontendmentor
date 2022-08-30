@@ -240,3 +240,8 @@ ul li{
     opacity: 70%;
     }
   }
+  input:focus{
+    color: white;
+    font-size: 24px;
+    font-family: 'josefin sans';
+  }
