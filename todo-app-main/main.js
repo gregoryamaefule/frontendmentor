@@ -183,7 +183,15 @@ input.addEventListener('change', () => {
     listItem.appendChild(spanAfter)
     document.querySelector('.lizt').appendChild(listItem)
     setListNo()
-    console.log(radioB.length)
+    input.value = ''
 })
+
+const themeC = document.querySelector('#themeChanger')
+
+// themeC.addEventListener('click', handleThemeChange)
+
+// function handleThemeChange(){
+//     pass
+// }
 
 setListNo()
