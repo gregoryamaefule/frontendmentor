@@ -9,14 +9,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
         .main{
             width: 110px;
-            height: 110px;
+            aspect-ratio: 1/1;
             /* background-color: hsl(236, 21%, 26%); */
-            background-color: hsl(235, 16%, 14%);
-            margin: 10vh auto;
+            background-color: hsl(235, 16%, 14%) ;
+            margin: 1vh auto 20px;
             border-radius: 6px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0px 3.3px hsl(235, 16%, 14%) ;
+            box-shadow: 0px 3.3px hsl(234, 17%, 12%) ;
             transition: 500ms;
         }
         .main::before{
@@ -29,7 +29,7 @@
             height: 9%;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            background-color:inherit;
+            background-color:hsl(234, 17%, 12%);
         }
         .main::after{
             position: absolute;
@@ -41,7 +41,7 @@
             height: 9%;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            background-color:inherit;
+            background-color:hsl(234, 17%, 12%);
         }
         .main div{
             width: 100%;
@@ -64,7 +64,6 @@
             border-bottom-right-radius: 6px;
         }
         .main div:first-child span{
-            font-family: 'red hat text';
             font-size: 60px;
             position: absolute;
             top: 50%;
@@ -83,27 +82,115 @@
             width: 600px;
             margin: 10vh auto;
             justify-content: space-evenly;
+            font-family: 'red hat text';
+            text-align: center;
+        }
+        main div p{
+            font-size: 14px;
+            color: white;
+            opacity: 60%;
+            
+        }
+        div h1{
+            text-align: center;
+            margin: 10vh auto 0;
+            font-size: 21px;
+            letter-spacing: 3px;
+            font-family: 'red hat text';
+            color: white;
+            opacity: 80%;
+        }
+        body{
+            background-image: url(images/bg-stars.svg), url(images/pattern-hills.svg);
+            background-position: 0, bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-color: hsl(279, 29%, 13%) ;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            /* background-color: hsl(300, 25%, 12%) ; */
+            /* background-color: hsl(300, 17%, 12%) ; */
+        }
+        footer{
+            position: sticky;
+            bottom: 10vh;
+            margin: 0 auto;
+            display: flex;
+            gap: 16px;
+            justify-self: flex-end;
+        }
+        @media (max-width:600px){
+            div h1{
+                width: 80%;
+                font-size: 17px;
+            }
+            body{
+                background-size: 250%;
+            }
+            .main{
+                width: 80px;
+            }
+            main{
+                width: 100%;
+            }
+            .main div span{
+            font-family: 'red hat text';
+            font-size: 36px;
+            line-height: 41px;
+            position: absolute;
+            bottom: 50%;
+            right: 15%;
+        }
+        .main div:first-child span{
+            font-size: 36px;
+            position: absolute;
+            top: 50%;
+            right: 15%;
+        }
         }
     </style>
 </head>
 <body>
+    <div>
+        <h1>WE'RE LAUNCHING SOON</h1>
+    </div>
     <main>
-        <div class="main">
-            <div><span>08</span></div>
-            <div><span>08</span></div>
+        <div>
+            <div class="main">
+                <div><span>08</span></div>
+                <div><span>08</span></div>
+            </div>
+            <p>Days</p>
         </div>
-        <div class="main">
-            <div><span>23</span></div>
-            <div><span>23</span></div>
+        <div>
+            <div class="main">
+                <div><span>23</span></div>
+                <div><span>23</span></div>
+            </div>
+            <p>Hours</p>
         </div>
-        <div class="main">
-            <div><span>55</span></div>
-            <div><span>55</span></div>
+        <div>
+            <div class="main">
+                <div><span>55</span></div>
+                <div><span>55</span></div>
+            </div>
+            <p>Minutes</p>
         </div>
-        <div class="main">
-            <div><span>41</span></div>
-            <div><span>41</span></div>
+        <div>
+            <div class="main">
+                <div><span>41</span></div>
+                <div><span>41</span></div>
+            </div>
+            <p>Seconds</p>
         </div>
     </main>
+    <footer>
+        <a href="#"><img src="images/icon-facebook.svg" alt=""></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt=""></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt=""></a>
+    </footer>
 </body>
 </html>
