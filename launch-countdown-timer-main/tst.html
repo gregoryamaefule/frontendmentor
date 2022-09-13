@@ -167,29 +167,29 @@
     <main>
         <div>
             <div class="main">
-                <div><span>08</span></div>
-                <div><span>08</span></div>
+                <div><span class="days">08</span></div>
+                <div><span class="days">08</span></div>
             </div>
             <p>Days</p>
         </div>
         <div>
             <div class="main">
-                <div><span>23</span></div>
-                <div><span>23</span></div>
+                <div><span class="hours">23</span></div>
+                <div><span class="hours">23</span></div>
             </div>
             <p>Hours</p>
         </div>
         <div>
             <div class="main">
-                <div><span>55</span></div>
-                <div><span>55</span></div>
+                <div><span class="minutes">55</span></div>
+                <div><span class="minutes">55</span></div>
             </div>
             <p>Minutes</p>
         </div>
         <div>
             <div class="main">
-                <div><span>41</span></div>
-                <div><span>41</span></div>
+                <div><span class="seconds">41</span></div>
+                <div><span class="seconds">41</span></div>
             </div>
             <p>Seconds</p>
         </div>
@@ -200,4 +200,56 @@
         <a href="#"><img src="images/icon-pinterest.svg" alt=""></a>
     </footer>
 </body>
+<script>
+    let Year = 2022;
+    let Month = 9 - 1;
+    let Day = 20;
+    let D_day = new Date(Year, Month, Day, 23, 55, 44)
+    const days = document.querySelectorAll('.days')
+    const hours = document.querySelectorAll('.hours')
+    const minutes = document.querySelectorAll('.minutes')
+    const seconds = document.querySelectorAll('.seconds')
+    let Days = Math.floor((D_day - new Date())/ 86400000) 
+    let Hours = Math.floor(((D_day - new Date()) %86400000 )/3600000)
+    let Minutes = Math.floor((((D_day - new Date()) %86400000 )%3600000)/60000)
+    let Seconds = Math.floor(((((D_day - new Date()) %86400000 )%3600000)%60000)/1000)
+    // while (D_day - new Date() >= 0){
+    //     const myTimeout = setTimeout(myTimeOutHandler, 1000);
+    // }
+    if (D_day - new Date() === 0){
+        for (const day of days){
+            day.innerHTML = 00}
+        for (const hour of hours){
+            hour.innerHTML = 00}
+        for (const minute of minutes){
+            minute.innerHTML = 00}
+        for (const second of seconds){
+            second.innerHTML = 00}
+    }else{
+        const myFunc = setInterval(myTimeOutHandler, 1000)
+    }
+
+function myTimeOutHandler() {
+        if(D_day - new Date() === 0){
+            clearInterval(myFunc)
+        }else{
+            for (const day of days){
+            day.innerHTML = Math.floor((D_day - new Date())/ 86400000) <= 9 ? `0${Math.floor((D_day - new Date())/ 86400000)}` : Math.floor((D_day - new Date())/ 86400000)
+        }
+        for (const hour of hours){
+            hour.innerHTML = Math.floor(((D_day - new Date()) %86400000 )/3600000) <= 9 ? `0${Math.floor(((D_day - new Date()) %86400000 )/3600000)}` : Math.floor(((D_day - new Date()) %86400000 )/3600000)
+        }
+        for (const minute of minutes){
+            minute.innerHTML = Math.floor((((D_day - new Date()) %86400000 )%3600000)/60000) <= 9 ? `0${Math.floor((((D_day - new Date()) %86400000 )%3600000)/60000)}` : Math.floor((((D_day - new Date()) %86400000 )%3600000)/60000)
+        }
+        for (const second of seconds){
+            second.innerHTML = Math.floor(((((D_day - new Date()) %86400000 )%3600000)%60000)/1000) <= 9 ? `0${Math.floor(((((D_day - new Date()) %86400000 )%3600000)%60000)/1000)}` : Math.floor(((((D_day - new Date()) %86400000 )%3600000)%60000)/1000)
+        }
+        }
+}
+    console.log(Seconds)
+    console.log(Minutes)
+    console.log(Hours)
+    console.log(Days)
+</script>
 </html>
