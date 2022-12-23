@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="index.js">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <main>
+        <section>
+            <nav>
+                <ul>
+                    <li><span class="NO active-no">1</span><p><span class="steps">step1</span><span class="Step-details">your info</span></p></li>
+                    <li><span class="NO">2</span><p><span class="steps">step2</span><span class="Step-details">select plan</span></p></li>
+                    <li><span class="NO">3</span><p><span class="steps">step3</span><span class="Step-details">add-ons</span></p></li>
+                    <li><span class="NO">4</span><p><span class="steps">step4</span><span class="Step-details">summary</span></p></li>
+                </ul>
+            </nav>
+            <form action="">
+                <div class="personal-info form-section active">
+                    <div>
+                        <h2>Personal info</h2>
+                        <p>Please provide your name email address, and phone number.</p>
+
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name" placeholder="Name"><br>
+
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Email"><br>
+
+                        <label for="phoneNumber">Phone Number</label><br>
+                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone Number"><br>
+                    </div>
+
+                    <div class="nextstep">
+                        <button>Next Step</button>
+                    </div>
+                </div>
+                <div class="select-your-plan form-section">
+                    <div>
+                        <h2>Select your plan</h2>
+                        <p>You have the option of monthly or yearly billing.</p>
+
+                        <ul>
+                            <li class="select-your-plan-active">
+                                <span><img src="assets/images/icon-arcade.svg" alt=""></span>
+                                <p>
+                                    <span class="subname">Arcade</span>
+                                    <span id="Arcade-Price" class="price">$9/mo</span>
+                                </p>
+                            </li>
+                            <li>
+                                <span><img src="assets/images/icon-advanced.svg" alt=""></span>
+                                <p>
+                                    <span class="subname">Advanced</span>
+                                    <span id="Advanced-price" class="price">$12/mo</span>
+                                </p>
+                            </li>
+                            <li>
+                                <span><img src="assets/images/icon-pro.svg" alt=""></span>
+                                <p>
+                                    <span class="subname">Pro</span>
+                                    <span id="Pro-price" class="price">$15/mo</span>
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="moyr">
+                            <span>Monthly</span>
+                            <button><i class="fa fa-circle"></i></button>
+                            <span>Yearly</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="goback">Go Back</button>
+                        <button class="Nextstep">Next Step</button>
+                    </div>
+                </div>
+                <div class="pickadd-ons form-section">
+                    <div>
+                        <h2>Pick add-ons</h2>
+                        <p>Add-ons help enhance your gaming experience</p>
+
+                        <div>
+                            <div class="checked">
+                                <input type="checkbox" name="online-service" id="online-service" checked>
+                                <label for="online-service">
+                                    <div>
+                                        <div>
+                                            <span>Online service</span>
+                                            <span>Access to multiplayer games</span>
+                                        </div>
+                                        <div>+$1/mo</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="checked">
+                                <input type="checkbox" name="larger-storage" id="larger-storage" checked>
+                                <label for="larger-storage">
+                                    <div>
+                                        <div>
+                                            <span>Larger storage</span>
+                                            <span>Extra 1TB of cloud save</span>
+                                        </div>
+                                        <div>+$2/mo</div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="customizable-profile" id="customizable-profile">
+                                <label for="customizable-profile">
+                                    <div>
+                                        <div>
+                                            <span>Customizable Profile</span>
+                                            <span>Custom theme on your profile</span>
+                                        </div>
+                                        <div>+$2/mo</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button>Go Back</button>
+                        <button>Next Step</button>
+                    </div>
+                </div>
+                <div class="finishing-up form-section">
+                    <div>
+                        <h2>Finishing up</h2>
+                        <p>Double-check everything looks OK before confirming.</p>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <span>Arcade(Monthly)</span>
+                                        <span>Change</span>
+                                    </div>
+                                    <div>$90/yr</div>
+                                </li>
+                                <li>
+                                    <span>Online service</span>
+                                    <span>+$10/yr</span>
+                                </li>
+                                <li>
+                                    <span>Larger storage</span>
+                                    <span>+$20/yr</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="total">
+                            <span>Total (per year)</span>
+                            <span>$120/yr</span>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button>Go Back</button>
+                        <button>Confirm</button>
+                    </div>
+                </div>
+                <div class="thankyou form-section">
+                    <div>
+                        <img src="assets/images/icon-thank-you.svg" alt="">
+                        <h2>Thank you!</h2>
+                        <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+  
+</body>
+</html>
