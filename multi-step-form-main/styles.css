@@ -21,6 +21,11 @@ section{
     background: white;
     border-radius: 16px;
     padding: 14px;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 0.4s;
+    flex-basis: 55%;
+
 }
 ul{
     list-style-type: none;
@@ -69,7 +74,14 @@ nav ul li p{
     background: hsl(228, 100%, 84%) ;
     color: black;
 }
+.NS, .GB, .selecttarget>li, .moyr button{
+    cursor: pointer;
+}
 form{
+    position: relative;
+    bottom: 000%;
+    transition: all;
+    transition-duration: 0.4s;
 
 }
 .form-section{
@@ -298,4 +310,5 @@ i{
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
