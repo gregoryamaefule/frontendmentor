@@ -7,23 +7,21 @@ const paos = document.querySelectorAll('.pao input')
 let position = 000
 let positn = 'left'
 
-// for (const pao of paos){
-//     pao.addEventListener('change', handlepao)
+for (const pao of paos){
+    pao.addEventListener('change', handlepao)
 
-// }
+}
 
 
-// function handlepao(e){
-//     if (e.target.hasAttribute('checked')){
-//         console.log(e.target.parentNode)
-//         e.target.parentNode.classList.add('.checked')
-//     }
-//     else{
-//         console.log(1)
-//         e.target.parentNode.classList.remove('.checked')
+function handlepao(e){
+    if (e.target.checked == 1){
+        e.target.parentElement.classList.add('checked')
+    }
+    else{
+        e.target.parentElement.classList.remove('checked')
         
-//     }
-// }
+    }
+}
 
 moyrbutton.addEventListener('click', handlemoyr)
 
