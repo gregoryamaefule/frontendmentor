@@ -51,6 +51,7 @@ nav ul li p{
     flex-direction: column;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 14px;
 }
 .steps{
     font-weight: 500;
@@ -310,5 +311,90 @@ i{
     justify-content: center;
     align-items: center;
     text-align: center;
+
+}
+@media (max-width:700px){
+    .steps, .Step-details{
+        display: none;
+    }
+    .desktop{
+        display: none;
+    }
+    .target{
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    body{
+        background-image: url(assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    main{
+        width: 100%;
+        height: 100%;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 85%;
+        gap: 20px;
+        height: 100%;
+        /* height: 100vh; */
+        width: 100%;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        /* border: 1px solid black; */
+        margin: 0;
+        min-width: fit-content;
+        padding: 0;
+        margin-top: 0;
+    }
+    nav{
+        background-image: none;
+        background-size: none;
+        flex-basis: 10%;
+        padding: 4px;
+        width: 100vw;
+        /* border: 1px solid black; */
+    }
+    section, form, .form-section{
+        background-color: transparent;
+    }
+    form{
+        flex-basis: 90%;
+        height: 90%;
+    }
+    .form-section{
+        /* border: 1px solid black; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-basis: 100%;
+    }
+    .form-section>div{
+        background-color: white;
+        width: 90%;
+        padding: 20px;
+    }
+    .form-section>div:first-child{
+        border-radius: 10px;
+    }
+    .form-section>div:nth-child(2){
+        width: 100%;
+    }
+    .nextstep{
+        margin: 0;
+        margin-top: 20px;
+    }
 
 }
