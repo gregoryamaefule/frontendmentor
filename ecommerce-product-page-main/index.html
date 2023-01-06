@@ -5,40 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
   
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <nav>
+      <div class="logo">
+        <img src="images/icon-menu.svg" alt="hamburger menu" id="mobile-menu">
+        <img src="images/logo.svg" alt="company-logo">
+      </div>
+      <ul class="link-list">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="nav-profile">
+        <img src="images/icon-cart.svg" alt="cart-icon" id="cart-icon">
+        <img src="images/image-avatar.png" alt="profile-image" id="profile-img">
+      </div>
+    </nav>
+    <div class="mobile-nav">
+      <img src="images/icon-close.svg" alt="close-menu-icon" id="close-menu-icon">
+      <ul class="mobile-link-list">
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <section class="product">
+      <div class="image-product">
+        <div class="active image">
+          <button><img src="images/icon-previous.svg" alt="icon-previous"></button>
+          <button><img src="images/icon-next.svg" alt="icon-next"></button>
+        </div>
+        <div class="image-product-thumbnails">
+          <img src="images/image-product-1-thumbnail.jpg" alt="image-product-thumbnail">
+          <img src="images/image-product-2-thumbnail.jpg" alt="image-product-thumbnail">
+          <img src="images/image-product-3-thumbnail.jpg" alt="image-product-thumbnail">
+          <img src="images/image-product-4-thumbnail.jpg" alt="image-product-thumbnail">
+        </div>
+      </div>
+      <div class="image-product-overlay">
+        <img src="images/icon-close.svg" alt="icon-close" id="icon-close-overlay">
+        <div class="active image">
+          <button><img src="images/icon-previous.svg" alt="icon-previous"></button>
+          <button><img src="images/icon-next.svg" alt="icon-next"></button>
+        </div>
+        <div class="image-product-thumbnails">
+          <img src="images/image-product-1-thumbnail.jpg" class="itb" alt="image-product-thumbnail">
+          <img src="images/image-product-2-thumbnail.jpg" alt="image-product-thumbnail">
+          <img src="images/image-product-3-thumbnail.jpg" alt="image-product-thumbnail">
+          <img src="images/image-product-4-thumbnail.jpg" alt="image-product-thumbnail">
+        </div>
+      </div>
+      <div class="product-description">
+        <h4>SNEAKER COMPANY</h4>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low profile sneakers are your are perfect casual wear companion. Featuring a durable rubber outer sole, they would withstand everything the weather can offer.</p>
+        <div>
+          <div class="dp">
+            <span class="deducted-price">
+              $125.00
+            </span>
+            <span class="deduction_percentage">
+              50%
+            </span>
+          </div>
+          <div class="main-price">
+            $250.00
+          </div>
+        </div>
+        <div class="addTC">
+          <div>
+            <span class="minus"><img src="images/icon-minus.svg" alt=""></span>
+            <span class="Q">0</span>
+            <span class="plus"><img src="images/icon-plus.svg" alt=""></span>
+          </div>
+          <button>
+            <img src="images/Shape.png" alt="">
+            <p>Add to cart</p>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

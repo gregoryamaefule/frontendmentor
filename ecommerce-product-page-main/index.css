@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    min-width: 910px;
+    min-height: 560px;
+    width: 80vw;
+    height: 100vh;
+    margin: 1vh auto;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+#mobile-menu{
+    display: none;
+}
+.mobile-nav{
+    display: none;
+}
+.image-product-overlay{
+    display: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid #E4E9F2;
+    margin-bottom: 20px;
+}
+ul{
+    list-style-type: none;
+}
+.link-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.nav-profile{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+.nav-profile>#profile-img{
+    width: 40px;
+    height: 40px;
+}
+.link-list>li>a{
+    text-decoration: none;
+    color: #69707D;
+}
+.product{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 10vh auto;
+}
+.image-product{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.product-description{
+    flex-basis: 50%;
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+}
+.image{
+    width: 345px;
+    aspect-ratio: 1/1;
+    border-radius: 9px;
+    background: url(images/image-product-1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.image>button{
+    display: none;
+}
+.image-product-thumbnails{
+    width: 345px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-product-thumbnails>img{
+    width: 73px;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+.product-description>h4{
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF7E1B;
+}
+.product-description>h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 48px;
+    color: #1D2026;
+    margin: 11px 0;
+}
+.product-description>p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #69707D;
+}
+.product-description>div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 8px 0;
+}
+.product-description>div>.dp>span{
+    margin-right: 6px;
+}
+.deducted-price{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #1D2026;
+}
+
+.deduction_percentage{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FF7E1B;
+    padding: 2px;
+    background-color: #FFEEE2;
+    border-radius: 4px;
+}
+.main-price{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: line-through;
+    color: #B6BCC8;
+}
+.product>.product-description>.addTC{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.addTC>button{
+    flex-basis: 60%;
+    background: #FF7E1B;
+    box-shadow: 0px 20px 50px -20px #FF7E1B;
+    border-radius: 10px; 
+    height: 56px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    gap: 12px;
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+.addTC>button>p{
+    color: white;
+}
+.addTC>div{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    border-radius: 10px;
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    background: #F6F8FD;
+    padding: 0 15px;
+
+}
+
+/* active states styling */
+.itb{
+    width: 400px;
+    opacity: 0.2;
+    outline: 2px solid #FF7E1B;
+}
