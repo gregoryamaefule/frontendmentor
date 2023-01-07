@@ -26,7 +26,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    height: 75px;
     border-bottom: 0.5px solid #E4E9F2;
     margin-bottom: 20px;
 }
@@ -48,10 +48,25 @@ ul{
 .nav-profile>#profile-img{
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav-profile>#profile-img:hover{
+    outline: #FF7E1B 2px solid;
+}
+.link-list{
+    height: 100%;
+}
+.link-list>li{
+    height: 100%;
 }
 .link-list>li>a{
     text-decoration: none;
     color: #69707D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .product{
     display: flex;
@@ -95,6 +110,7 @@ ul{
     width: 73px;
     aspect-ratio: 1/1;
     border-radius: 5px;
+    cursor: pointer;
 }
 .product-description>h4{
     font-family: 'Kumbh Sans';
@@ -179,6 +195,7 @@ ul{
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
+    cursor: pointer;
 }
 .addTC>button>p{
     color: white;
@@ -199,10 +216,18 @@ ul{
     padding: 0 15px;
 
 }
+.minus, .plus{
+    cursor: pointer;
+}
 
 /* active states styling */
 .itb{
-    width: 400px;
     opacity: 0.2;
     outline: 2px solid #FF7E1B;
+}
+.image-product-thumbnails>img:hover{
+    opacity: 0.2;
+}
+.link-list>li>a:hover{
+    border-bottom: 2.5px solid #FF7E1B;
 }
