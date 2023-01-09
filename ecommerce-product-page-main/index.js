@@ -79,3 +79,54 @@ function handldeImageP(event){
     }
     event.target.classList.add("itb")
 }
+
+
+// mobile functionalities
+
+const mobileMenu = document.querySelector('#mobile-menu')
+mobileMenu.addEventListener('click', handleMobileMenu)
+
+const mobileNav = document.querySelector('.mobile-nav')
+
+function handleMobileMenu(){
+    document.querySelector('body').style.overflow = 'hidden'
+    mobileNav.style.display = 'flex'
+
+}
+const closeMenuIcon = document.querySelector('#close-menu-icon')
+closeMenuIcon.addEventListener('click', handleCloseMI)
+
+
+function handleCloseMI(){
+    document.querySelector('body').style.overflow = ''
+    mobileNav.style.display = 'none'
+
+}
+
+const imageArray = ["images/image-product-1.jpg", "images/image-product-2.jpg", "images/image-product-3.jpg", "images/image-product-4.jpg" ]
+
+const iconPrev = document.querySelector('#icon-previous')
+const iconNext = document.querySelector('#icon-next')
+
+iconNext.addEventListener('click', handleIconNext)
+iconPrev.addEventListener('click', handleIconPrev)
+
+let IP = 0
+let IN = 0
+
+function handleIconNext(){
+    if (IN == 3){
+        return
+    }
+    IN += 1
+    image.style.backgroundImage = `url(${imageArray[IN]})`
+
+    
+}
+function handleIconPrev(){
+    if (IN == 0){
+        return
+    }
+    IN -= 1
+    image.style.backgroundImage = `url(${imageArray[IN]})`
+}
