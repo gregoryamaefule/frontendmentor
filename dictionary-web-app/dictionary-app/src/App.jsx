@@ -10,13 +10,29 @@ import PartOfSpeech from './PartOfSpeech'
 import Search from './Search'
 import ResultHeader from './ResultHeader'
 import Header from './Header'
+import repl1 from './data'
 
 
 
 function App() {
   const [isLightModee, setIsLightMode] = useState(true);
   const [fontSpecifiedd, setfontSpecifiedd] = useState('San Serif');
+  const [valuee, setvaluee] = useState('keyboard');
+  const [replyy, setReply] = useState(repl1);
 
+  function handleSubmit(e){
+    e.preventDefault();
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${valuee}`)
+    .then((result) => result.json() )
+    .then((data) => {
+        console.log(data)
+        setReply(data == null ? null : data)
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+  }
+  
   function handleClick(){
     setIsLightMode(!isLightModee);
   }
@@ -25,145 +41,26 @@ function App() {
     setfontSpecifiedd(e)
   }
 
+  function handleSearchWordChange(e){
+    setvaluee(e)
+  }
+
   document.querySelector('body').style.backgroundColor = isLightModee ? 'white' : 'black';
   document.querySelector('body').style.fontFamily = fontSpecifiedd == 'San Serif' ? 'San Serif' : fontSpecifiedd == 'Serif' ? 'Serif' : 'Monospace';
 
 
- const repl = [
-    {
-      "word": "hello",
-      "phonetic": "həˈləʊ",
-      "phonetics": [
-        {
-          "text": "həˈləʊ",
-          "audio": "//ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3"
-        },
-        {
-          "text": "hɛˈləʊ"
-        }
-      ],
-      "origin": "early 19th century: variant of earlier hollo ; related to holla.",
-      "meanings": [
-        {
-          "partOfSpeech": "exclamation",
-          "definitions": [
-            {
-              "definition": "used as a greeting or to begin a phone conversation.",
-              "example": "hello there, Katie!",
-              "synonyms": [],
-              "antonyms": []
-            }
-          ]
-        },
-        {
-          "partOfSpeech": "noun",
-          "definitions": [
-            {
-              "definition": "an utterance of ‘hello’; a greeting.",
-              "example": "she was getting polite nods and hellos from people",
-              "synonyms": [],
-              "antonyms": []
-            }
-          ]
-        },
-        {
-          "partOfSpeech": "verb",
-          "definitions": [
-            {
-              "definition": "say or shout ‘hello’.",
-              "example": "I pressed the phone button and helloed",
-              "synonyms": [],
-              "antonyms": []
-            }
-          ]
-        }
-      ]
-    }
-  ]
-
- const repl1 = [
-    {
-      "word": "keyboard",
-      "phonetic": "/ˈkiːbɔːd/",
-      "phonetics": [
-        {
-          "text": "/ˈkiːbɔːd/",
-          "audio": ""
-        },
-        {
-          "text": "/ˈkiːbɔːd/",
-          "audio": ""
-        },
-        {
-          "text": "/ˈkibɔɹd/",
-          "audio": "https://api.dictionaryapi.dev/media/pronunciations/en/keyboard-us.mp3",
-          "sourceUrl": "https://commons.wikimedia.org/w/index.php?curid=1755168",
-          "license": {
-            "name": "BY-SA 3.0",
-            "url": "https://creativecommons.org/licenses/by-sa/3.0"
-          }
-        }
-      ],
-      "meanings": [
-        {
-          "partOfSpeech": "noun",
-          "definitions": [
-            {
-              "definition": "(etc.) A set of keys used to operate a typewriter, computer etc.",
-              "synonyms": [],
-              "antonyms": []
-            },
-            {
-              "definition": "A component of many instruments including the piano, organ, and harpsichord consisting of usually black and white keys that cause different tones to be produced when struck.",
-              "synonyms": [],
-              "antonyms": []
-            },
-            {
-              "definition": "A device with keys of a musical keyboard, used to control electronic sound-producing devices which may be built into or separate from the keyboard device.",
-              "synonyms": [],
-              "antonyms": []
-            }
-          ],
-          "synonyms": [
-            "electronic keyboard"
-          ],
-          "antonyms": []
-        },
-        {
-          "partOfSpeech": "verb",
-          "definitions": [
-            {
-              "definition": "To type on a computer keyboard.",
-              "synonyms": [],
-              "antonyms": [],
-              "example": "Keyboarding is the part of this job I hate the most."
-            }
-          ],
-          "synonyms": [],
-          "antonyms": []
-        }
-      ],
-      "license": {
-        "name": "CC BY-SA 3.0",
-        "url": "https://creativecommons.org/licenses/by-sa/3.0"
-      },
-      "sourceUrls": [
-        "https://en.wiktionary.org/wiki/keyboard"
-      ]
-    }
-  ]
   
-const word = repl1[0].word;
-const phonetic = `${repl1[0].phonetic}`
+const word = replyy[0].word;
+const phonetic = `${replyy[0].phonetic}`
 
-const partOfSpeech0 = repl1[0].meanings[0];
-const partOfSpeech1 = repl1[0].meanings[1];
-const partOfSpeech2 = repl1[0].meanings[2];
+const partOfSpeech0 = replyy[0].meanings[0];
+const partOfSpeech1 = replyy[0].meanings[1];
+const partOfSpeech2 = replyy[0].meanings[2];
 
   return (
     <>
       <Header isLightMode={isLightModee} fontSpecified={fontSpecifiedd} onToggle={handleClick} onFontChange={handleOnFontChange} />
-      <Search value='keyboard' isLightMode={false} fontSpecified={fontSpecifiedd} />
+      <Search value={valuee} isLightMode={false} fontSpecified={fontSpecifiedd} onSearchWordChange={handleSearchWordChange} onSubmit={handleSubmit}/>
       <ResultHeader isLightMode={isLightModee} fontSpecified={fontSpecifiedd} word={word} phonetic={phonetic} />
       <PartOfSpeech isLightMode={isLightModee} fontSpecified={fontSpecifiedd} meaning={partOfSpeech0} />
       <PartOfSpeech isLightMode={isLightModee} fontSpecified={fontSpecifiedd} meaning={partOfSpeech1} />

@@ -7,7 +7,7 @@ import iconoir_search from './assets/iconoir_search.png'
 import audioIcon from './assets/Group4.png'
 import './App.css'
 
-export default function Search ({value, isLightMode, fontSpecified}){
+export default function Search ({value, isLightMode, fontSpecified, onSearchWordChange, onSubmit}){
     const darkMode = {
       backgroundColor: 'inherit',
       color: 'white',
@@ -18,10 +18,11 @@ export default function Search ({value, isLightMode, fontSpecified}){
           type="text" 
           value={value} 
           style={isLightMode ? {fontFamily:fontSpecified == 'San Serif' ? 'San Serif' : fontSpecified == 'Serif' ? 'Serif' : 'Monospace'} : {backgroundColor:'#1f1f1f', color:'white', fontFamily:fontSpecified == 'San Serif' ? 'San Serif' : fontSpecified == 'Serif' ? 'Serif' : 'Monospace'}}
-          
+          onChange={(e) => onSearchWordChange(e.target.value)}
           placeholder="keyboard"/>
         <button
         style={isLightMode ? null : {backgroundColor:'#1f1f1f'}}
+        onClick={(e) => onSubmit(e)}
         >
           <img src={iconoir_search} />
         </button>

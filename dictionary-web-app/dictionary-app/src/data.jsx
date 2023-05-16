@@ -1,4 +1,4 @@
-repl = [
+const repl = [
     {
       "word": "hello",
       "phonetic": "həˈləʊ",
@@ -50,7 +50,7 @@ repl = [
     }
   ]
 
-repl1 = [
+const repl1 = [
     {
       "word": "keyboard",
       "phonetic": "/ˈkiːbɔːd/",
@@ -121,3 +121,5 @@ repl1 = [
       ]
     }
   ]
+
+export default repl1
