@@ -1,35 +1,4 @@
-import { useState } from 'react'
-import dictionaryLogo from './assets/iconoir_book.png'
-import oval from './assets/oval.png'
-import halfmoon from './assets/iconoir_half-moon.png'
-import halfmoondark from './assets/iconoir_half-moon-dark.png'
-import iconoir_search from './assets/iconoir_search.png'
-import audioIcon from './assets/Group4.png'
-import './App.css'
-import PartOfSpeech from './PartOfSpeech'
-import Search from './Search'
-import ResultHeader from './ResultHeader'
-import Header from './Header'
-
-
-
-function App() {
-  const [isLightModee, setIsLightMode] = useState(true);
-  const [fontSpecifiedd, setfontSpecifiedd] = useState('San Serif');
-
-  function handleClick(){
-    setIsLightMode(!isLightModee);
-  }
-
-  function handleOnFontChange(e){
-    setfontSpecifiedd(e)
-  }
-
-  document.querySelector('body').style.backgroundColor = isLightModee ? 'white' : 'black';
-  document.querySelector('body').style.fontFamily = fontSpecifiedd == 'San Serif' ? 'San Serif' : fontSpecifiedd == 'Serif' ? 'Serif' : 'Monospace';
-
-
- const repl = [
+repl = [
     {
       "word": "hello",
       "phonetic": "həˈləʊ",
@@ -81,7 +50,7 @@ function App() {
     }
   ]
 
- const repl1 = [
+repl1 = [
     {
       "word": "keyboard",
       "phonetic": "/ˈkiːbɔːd/",
@@ -152,24 +121,3 @@ function App() {
       ]
     }
   ]
-  
-const word = repl1[0].word;
-const phonetic = `${repl1[0].phonetic}`
-
-const partOfSpeech0 = repl1[0].meanings[0];
-const partOfSpeech1 = repl1[0].meanings[1];
-const partOfSpeech2 = repl1[0].meanings[2];
-
-  return (
-    <>
-      <Header isLightMode={isLightModee} fontSpecified={fontSpecifiedd} onToggle={handleClick} onFontChange={handleOnFontChange} />
-      <Search value='keyboard' isLightMode={false} fontSpecified={fontSpecifiedd} />
-      <ResultHeader isLightMode={isLightModee} fontSpecified={fontSpecifiedd} word={word} phonetic={phonetic} />
-      <PartOfSpeech isLightMode={isLightModee} fontSpecified={fontSpecifiedd} meaning={partOfSpeech0} />
-      <PartOfSpeech isLightMode={isLightModee} fontSpecified={fontSpecifiedd} meaning={partOfSpeech1} />
-      <PartOfSpeech isLightMode={isLightModee} fontSpecified={fontSpecifiedd} meaning={partOfSpeech2} />
-    </>
-  )
-}
-
-export default App

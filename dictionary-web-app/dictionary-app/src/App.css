@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 
@@ -9,24 +9,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50vw;
+  width: 60vw;
   height: 64px;
 }
 .innerHeader{
-  width: 220px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.innerHeader>select{
+select{
   border: none;
   outline: none;
-  padding: 4px;
+  padding: 2px;
   font-weight: 700;
   font-size: 16px;
-  width: 100px;
+  flex-basis: 50%;
   color: #757575;
   cursor: pointer;
+  text-align: center;
+  font-family: monospace;
 }
 option{
   font-weight: 700;
@@ -35,15 +37,16 @@ option{
 }
 .innHeader{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  width: 100px;
+  gap: 30px;
+  flex-basis: 50%;
   border-left: 1px solid #979797;
-  padding: 10px 15px;
+  padding: 10px 0px;
   margin-left: 10px
 }
 .spanLight{
-  width: 40px;
+  flex-basis: 30%;
   height: 20px;
   border-radius: 15px;
   cursor: pointer;
@@ -54,7 +57,7 @@ option{
   padding: 0px 5px;
 }
 .spanDark{
-  width: 40px;
+  flex-basis: 30%;
   height: 20px;
   border-radius: 15px;
   cursor: pointer;
@@ -64,27 +67,29 @@ option{
   justify-content: right;
   padding: 0px 5px;
 }
+.innHeader>img{
+  cursor: pointer;
+}
 
 form{
-  width: 50vw;
+  width: 60vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 44px;
+  height: 64px;
   margin: 30px 0;
-  overflow: hidden;
 }
 form>input{
   flex-basis: 85%;
-  height: 100%;
+  height: 98%;
   border: none;
   outline: none;
   background-color: #cdcdcd;
-  border-radius: 14px 0px 0px 14px;
+  border-radius: 13px 0px 0px 13px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
   color: #2d2d2d;
-  padding-left: 12px;
+  padding-left: 24px;
 }
 form>button{
   flex-basis: 15%;
@@ -99,10 +104,13 @@ form>button{
   justify-content: space-between;
   height: 87px;
   margin: 35px 0;
-  width: 50vw;
+  width: 60vw;
 }
 .wp{
-  height: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .wp>h1{
   margin: 0;
@@ -113,9 +121,11 @@ form>button{
 }
 .resultHeader>img{
   cursor: pointer;
+  width: 75px;
+  height: 75px;
 }
 .POS{
-  width: 50vw;
+  width: 60vw;
 }
 .ps{
   font-weight: 700;
@@ -171,5 +181,48 @@ hr{
   padding-right: 14px;
   color: #a445ed;
 
+}
+
+@media (max-width: 1200px){
+  .Header{
+    width: 70vw;
+  }
+  form{
+    width: 70vw;
+  }
+  .resultHeader{
+    width: 70vw;
+  }
+  .POS{
+    width: 70vw;
+  }
+}
+@media (max-width: 1000px){
+  .Header{
+    width: 85vw;
+  }
+  form{
+    width: 85vw;
+  }
+  .resultHeader{
+    width: 85vw;
+  }
+  .POS{
+    width: 85vw;
+  }
+}
+/* @media (max-width: 500px){
+  .Header{
+    width: 89vw;
+  }
+  form{
+    width: 89vw;
+  }
+  .resultHeader{
+    width: 89vw;
+  }
+  .POS{
+    width: 89vw;
+  } */
 }
 
